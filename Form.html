@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rusan Exit Form</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="Rusanform.css">
+    <style>
+        .section-title {
+            flex: 0 0 100%;
+            max-width: 100%;
+            /* margin-top: 50px; */
+        }
+
+        .section-title h2 {
+            font-size: 40px;
+            position: fixed;
+            color: #000000;
+            font-weight: 700;
+            position: relative;
+            margin-top: -40px;
+            margin-left: 30px;
+        }
+
+        .section-title h2::before {
+            content: '';
+            height: 4px;
+            width: 50px;
+            background-color: #ff0000;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 14px;
+            margin-left: 2px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            height: 4px;
+            width: 25px;
+            background-color: #ff0000;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 22px;
+            margin-left: 2px;
+        }
+
+        button {
+            background-color: #f7e711;
+            /* color: #000000; */
+            border-radius: 25px;
+            border: 0;
+            padding: 15px 50px 15px 50px;
+            cursor: pointer;
+            font-size: 19px;
+            font-weight: 800;
+            font-style: 15px;
+            margin-bottom: 40px;
+            /* justify-content: end; */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header nav -->
+    <section id="header">
+        <a href="#"><img src="rusan/logo.png"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="Form.html">Form</a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+    <!-- header nav -->
+    <!-- Form page stat -->
+    <section id="form">
+        <div class="container1">
+            <div class="aside-area">
+                <div class="section-title padd-15">
+                    <h2>Exit Form</h2>
+                </div>
+            </div>
+            <div class="form-area">
+                <div class="form-content padd-15">
+                    <div class="form-container padd-15">
+                        <!-- form -->
+                        <form id="employeeForm" action="rusandata.php" method="POST">
+                            <div class="row">
+                                <div class="empdetails padd-15">
+                                    <div class="f-item padd-15">
+                                        <label for="employeeId"><span>Employee ID:</span></label>
+                                        <input type="text" id="employeeId" name="employeeId" placeholder="Employee Id"
+                                            required>
+                                    </div>
+                                    <div class="f-item padd-15">
+                                        <label for="employeeName"><span>Employee Name:</span></label>
+                                        <input type="text" id="employeeName" name="employeeName"
+                                            placeholder="Employee Name" required>
+                                    </div>
+                                    <div class="f-item padd-15">
+                                        <label for="designation"><span>Designation:</span></label>
+                                        <input type="text" id="designation" name="designation"
+                                            placeholder="Desiganation" required>
+                                    </div>
+                                    <div class="f-item padd-15">
+                                        <label for="department"><span>Department:</span></label>
+                                        <input type="text" id="department" name="department" placeholder="Department"
+                                            required>
+                                    </div>
+                                </div>
+                                <div class="reqdates padd-15">
+                                    <div class="f-item padd-15">
+                                        <label for="dateOfJoining"><span>Date of Joining:</span></label>
+                                        <input type="date" id="dateOfJoining" name="dateOfJoining" required>
+                                    </div>
+                                    <div class="f-item padd-15">
+                                        <label for="resignationDate"><span>Resignation Date:</span></label>
+                                        <input type="date" id="resignationDate" name="resignationDate">
+                                    </div>
+                                    <div class="f-item padd-15">
+                                        <label for="lastDayOfWork"><span>Last Day of Work:</span></label>
+                                        <input type="date" id="lastDayOfWork" name="lastDayOfWork">
+                                    </div>
+                                    <div class="f-item padd-15">
+                                        <label for="exitInterviewDate"><span>Exit Interview Date:</span></label>
+                                        <input type="date" id="exitInterviewDate" name="exitInterviewDate">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- section1 -->
+                            <div class="row">
+                                <div class="section1 padd-15">
+                                    <h2>Section 1:-</h2>
+                                </div>
+                            </div>
+                            <section>
+                                <div class="reason">
+                                    <h4>1. Reason for leaving <span>RUSAN ?</span></h4>
+                                </div>
+                                <div class="r-item">
+                                    <!-- <label for="question"></label> -->
+                                    <select id="question" name="language1" required>
+                                        <option value="">Select an option</option>
+                                        <option value="Change in Job Responsibilities">Change in Job Responsibilities
+                                        </option>
+                                        <option value="Change in Desiganation">Change in Desiganation</option>
+                                        <option value="Pressure at work">Pressure at work</option>
+                                        <option value="Work Enviornment">Work Enviornment</option>
+                                        <option value="Health related Issuse">Health related Issuse</option>
+                                        <option value="Change in Location">Change in Location</option>
+                                        <option value="Better Compensation">Better Compensation</option>
+                                        <option value="Lack of opportunity">Lack of opportunity</option>
+                                        <option value="Learning opportunity">Learning opportunity</option>
+                                        <option value="Other*">Others* (Please specify below)</option>
+                                    </select>
+                                </div>
+                                <div class="f-item reason-box" id="reasonBox">
+                                    <label for="reason"></label>
+                                    <input type="text" id="reason" name="reason" placeholder="Your reason here">
+                                </div>
+                            </section>
+                            <!-- Question 1: What do you like the most? -->
+                            <section>
+                                <div class="form-group padd-15">
+                                    <label for="likes">2. Things I like the most at Rusan :- <span
+                                            class="required">*</span></label>
+                                    <input type="text" id="likes" name="likes" placeholder="Mention here..." required>
+                                </div>
+                            </section>
+                            <!-- Question 2: What do you dislike the most? -->
+                            <section>
+                                <div class="form-group padd-15">
+                                    <label for="dislikes">3. Things I dislike the most at Rusan :- <span
+                                            class="required">*</span></label>
+                                    <input type="text" id="dislikes" name="dislikes" placeholder="Mention here..."
+                                        required>
+                                </div>
+                            </section>
+                            <!-- Question 3: Why are you leaving? -->
+                            <section>
+                                <div class="form-group padd-15">
+                                    <label for="reasonLeaving">4. My expectations from the company (Rusan) at the time
+                                        of joining & whether it got fulfilled :- <span class="required">*</span></label>
+                                    <input type="text" id="reasonLeaving" name="reasonLeaving"
+                                        placeholder="Mention here..." required>
+                                </div>
+                            </section>
+                            <!-- section1 -->
+                            <!-- section2 -->
+                            <div class="row">
+                                <div class="section1 padd-15">
+                                    <h2>Section 2:-</h2>
+                                </div>
+                            </div>
+                            <section>
+                                <div class="reason padd-15">
+                                    <h4>5. Reporting Manager Evaluation :-</h4>
+                                </div>
+                                <div class="form-group padd-15">
+                                    <label for="managerName">Name of my reporting manager</label>
+                                    <input type="text" id="managerName" name="managerName"
+                                        placeholder="Reporting manager" required>
+                                </div>
+                                <div class="ratingo padd-15">
+                                    <h5>Rate your manager on the below parameters on the scale of 1 to 5 ( one being
+                                        poor and 5
+                                        beinhextremely good)</h5>
+                                </div>
+                                <section>
+                                    <div class="row">
+                                        <div class="r1 padd-15">
+                                            <div class="form-group">
+                                                <div class="ratecontainer">
+                                                    <div class="yellow-area"><span>Leadership</span></div>
+                                                    <div class="aqua-area">
+                                                        <input type="radio" name="leadership" id="leadership5"
+                                                            value="5"><label for="leadership5">★</label>
+                                                        <input type="radio" name="leadership" id="leadership4"
+                                                            value="4"><label for="leadership4">★</label>
+                                                        <input type="radio" name="leadership" id="leadership3"
+                                                            value="3"><label for="leadership3">★</label>
+                                                        <input type="radio" name="leadership" id="leadership2"
+                                                            value="2"><label for="leadership2">★</label>
+                                                        <input type="radio" name="leadership" id="leadership1"
+                                                            value="1"><label for="leadership1">★</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="ratecontainer">
+                                                    <div class="yellow-area"><span>Communication</span></div>
+                                                    <div class="aqua-area">
+                                                        <input type="radio" name="communication" id="communication5"
+                                                            value="5"><label for="communication5">★</label>
+                                                        <input type="radio" name="communication" id="communication4"
+                                                            value="4"><label for="communication4">★</label>
+                                                        <input type="radio" name="communication" id="communication3"
+                                                            value="3"><label for="communication3">★</label>
+                                                        <input type="radio" name="communication" id="communication2"
+                                                            value="2"><label for="communication2">★</label>
+                                                        <input type="radio" name="communication" id="communication1"
+                                                            value="1"><label for="communication1">★</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="ratecontainer">
+                                                    <div class="yellow-area"><span>Professionlism</span></div>
+                                                    <div class="aqua-area">
+                                                        <input type="radio" name="professionlism" id="professionlism5"
+                                                            value="5"><label for="professionlism5">★</label>
+                                                        <input type="radio" name="professionlism" id="professionlism4"
+                                                            value="4"><label for="professionlism4">★</label>
+                                                        <input type="radio" name="professionlism" id="professionlism3"
+                                                            value="3"><label for="professionlism3">★</label>
+                                                        <input type="radio" name="professionlism" id="professionlism2"
+                                                            value="2"><label for="professionlism2">★</label>
+                                                        <input type="radio" name="professionlism" id="professionlism1"
+                                                            value="1"><label for="professionlism1">★</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="ratecontainer">
+                                                    <div class="yellow-area"><span>Team Work</span></div>
+                                                    <div class="aqua-area">
+                                                        <input type="radio" name="teamwork" id="teamwork5"
+                                                            value="5"><label for="teamwork5">★</label>
+                                                        <input type="radio" name="teamwork" id="teamwork4"
+                                                            value="4"><label for="teamwork4">★</label>
+                                                        <input type="radio" name="teamwork" id="teamwork3"
+                                                            value="3"><label for="teamwork3">★</label>
+                                                        <input type="radio" name="teamwork" id="teamwork2"
+                                                            value="2"><label for="teamwork2">★</label>
+                                                        <input type="radio" name="teamwork" id="teamwork1"
+                                                            value="1"><label for="teamwork1">★</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="ratecontainer">
+                                                    <div class="yellow-area"><span>Transperancy</span></div>
+                                                    <div class="aqua-area">
+                                                        <input type="radio" name="transperancy" id="transperancy5"
+                                                            value="5"><label for="transperancy5">★</label>
+                                                        <input type="radio" name="transperancy" id="transperancy4"
+                                                            value="4"><label for="transperancy4">★</label>
+                                                        <input type="radio" name="transperancy" id="transperancy3"
+                                                            value="3"><label for="transperancy3">★</label>
+                                                        <input type="radio" name="transperancy" id="transperancy2"
+                                                            value="2"><label for="transperancy2">★</label>
+                                                        <input type="radio" name="transperancy" id="transperancy1"
+                                                            value="1"><label for="transperancy1">★</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="r1 padd-15">
+                                            <div class="form-group">
+                                                <div class="ratecontainer">
+                                                    <div class="yellow-area"><span>Time Management</span></div>
+                                                    <div class="aqua-area">
+                                                        <input type="radio" name="timemanagement" id="timemanagement5"
+                                                            value="5"><label for="timemanagement5">★</label>
+                                                        <input type="radio" name="timemanagement" id="timemanagement4"
+                                                            value="4"><label for="timemanagement4">★</label>
+                                                        <input type="radio" name="timemanagement" id="timemanagement3"
+                                                            value="3"><label for="timemanagement3">★</label>
+                                                        <input type="radio" name="timemanagement" id="timemanagement2"
+                                                            value="2"><label for="timemanagement2">★</label>
+                                                        <input type="radio" name="timemanagement" id="timemanagement1"
+                                                            value="1"><label for="timemanagement1">★</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="ratecontainer">
+                                                    <div class="yellow-area"><span>Empathy</span></div>
+                                                    <div class="aqua-area">
+                                                        <input type="radio" name="empathy" id="empathy5"
+                                                            value="5"><label for="empathy5">★</label>
+                                                        <input type="radio" name="empathy" id="empathy4"
+                                                            value="4"><label for="empathy4">★</label>
+                                                        <input type="radio" name="empathy" id="empathy3"
+                                                            value="3"><label for="empathy3">★</label>
+                                                        <input type="radio" name="empathy" id="empathy2"
+                                                            value="2"><label for="empathy2">★</label>
+                                                        <input type="radio" name="empathy" id="empathy1"
+                                                            value="1"><label for="empathy1">★</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="ratecontainer">
+                                                    <div class="yellow-area"><span>Good Listener</span></div>
+                                                    <div class="aqua-area">
+                                                        <input type="radio" name="goodlistener" id="goodlistener5"
+                                                            value="5"><label for="goodlistener5">★</label>
+                                                        <input type="radio" name="goodlistener" id="goodlistener4"
+                                                            value="4"><label for="goodlistener4">★</label>
+                                                        <input type="radio" name="goodlistener" id="goodlistener3"
+                                                            value="3"><label for="goodlistener3">★</label>
+                                                        <input type="radio" name="goodlistener" id="goodlistener2"
+                                                            value="2"><label for="goodlistener2">★</label>
+                                                        <input type="radio" name="goodlistener" id="goodlistener1"
+                                                            value="1"><label for="goodlistener1">★</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="ratecontainer">
+                                                    <div class="yellow-area"><span>Micromanager</span></div>
+                                                    <div class="aqua-area">
+                                                        <input type="radio" name="micromanager" id="micromanager5"
+                                                            value="5"><label for="micromanager5">★</label>
+                                                        <input type="radio" name="micromanager" id="micromanager4"
+                                                            value="4"><label for="micromanager4">★</label>
+                                                        <input type="radio" name="micromanager" id="micromanager3"
+                                                            value="3"><label for="micromanager3">★</label>
+                                                        <input type="radio" name="micromanager" id="micromanager2"
+                                                            value="2"><label for="micromanager2">★</label>
+                                                        <input type="radio" name="micromanager" id="micromanager1"
+                                                            value="1"><label for="micromanager1">★</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="ratecontainer">
+                                                    <div class="yellow-area"><span>Consistent Feedback</span></div>
+                                                    <div class="aqua-area">
+                                                        <input type="radio" name="consistentfeedback"
+                                                            id="consistentfeedback5" value="5"><label
+                                                            for="consistentfeedback5">★</label>
+                                                        <input type="radio" name="consistentfeedback"
+                                                            id="consistentfeedback4" value="4"><label
+                                                            for="consistentfeedback4">★</label>
+                                                        <input type="radio" name="consistentfeedback"
+                                                            id="consistentfeedback3" value="3"><label
+                                                            for="consistentfeedback3">★</label>
+                                                        <input type="radio" name="consistentfeedback"
+                                                            id="consistentfeedback2" value="2"><label
+                                                            for="consistentfeedback2">★</label>
+                                                        <input type="radio" name="consistentfeedback"
+                                                            id="consistentfeedback1" value="1"><label
+                                                            for="consistentfeedback1">★</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </section>
+                            <!-- section2 -->
+                            <!-- section3 -->
+                            <div class="section2 ">
+                                <h2>Section 3:-</h2>
+                            </div>
+                            <section>
+                                <!-- Question 1: Suggestion for Location -->
+                                <div class="form-group padd-15">
+                                    <label for="location">6. Suggestion for Location:</label>
+                                    <input type="text" id="location" name="location1"
+                                        placeholder="Suggestion for location" required>
+                                </div>
+                            </section>
+                            <section>
+                                <!-- Question 2: Suggestion for Department -->
+                                <div class="form-group padd-15">
+                                    <label for="department1">7. Suggestion for Department:</label>
+                                    <input type="text" id="department1" name="department1"
+                                        placeholder="Suggestion for department" required>
+                                </div>
+
+                            </section>
+                            <section>
+                                <!-- Question 3: Suggestion for Organization -->
+                                <div class="form-group padd-15">
+                                    <label for="organization">8. Suggestion for Organization:</label>
+                                    <input type="text" id="organization" name="organization"
+                                        placeholder="Suggestion for organization" required>
+                                </div>
+                            </section>
+                            <!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+                            <section>
+                                <div class="reasonq">
+                                    <div class="reason">
+                                        <h4>9. Answer the following questions, as YES or NO based on your interest :-
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="sub-que padd-15">
+                                    <div class="form-group">
+                                        <label>9.1 : I would prefer to re-join <span>RUSAN </span>, at any time in
+                                            future :-</label>
+                                        <div class="sub-op padd-15">
+                                            <input type="checkbox" id="rejoinYes" name="rejoin" value="yes">
+                                            <label for="rejoinYes"> Yes</label>
+                                            <input type="checkbox" id="rejoinNo" name="rejoin" value="no">
+                                            <label for="rejoinNo"> No</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Reason Box -->
+                                    <div class="reason-box" id="rejoinReasonBox">
+                                        <label for="rejoinReason"></label>
+                                        <textarea id="rejoinReason" name="rejoinReason" placeholder="Reason"
+                                            rows="2"></textarea>
+                                    </div>
+
+                                </div>
+                                <div class="sub-que padd-15">
+                                    <div class="form-group">
+                                        <label>9.2 : I would recommend my friends/colleague to join <span>RUSAN
+                                            </span>:-</label>
+                                        <div class="sub-op padd-15">
+                                            <input type="checkbox" id="recommendYes" name="recommend" value="yes">
+                                            <label for="recommendYes"> Yes</label>
+                                            <input type="checkbox" id="recommendNo" name="recommend" value="no">
+                                            <label for="recommendNo"> No</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Reason Box -->
+                                    <div class="reason-box" id="recommendReasonBox">
+                                        <label for="recommendReason"></label>
+                                        <textarea id="recommendReason" name="recommendReason" placeholder="Reason"
+                                            rows="2"></textarea>
+                                    </div>
+                                </div>
+                                <script>
+                                    // Function to handle the visibility of the reason box
+                                    function toggleReasonBox(yesCheckboxId, noCheckboxId, reasonBoxId) {
+                                        const yesCheckbox = document.getElementById(yesCheckboxId);
+                                        const noCheckbox = document.getElementById(noCheckboxId);
+                                        const reasonBox = document.getElementById(reasonBoxId);
+
+                                        yesCheckbox.addEventListener('change', function () {
+                                            if (yesCheckbox.checked) {
+                                                reasonBox.style.display = 'none'; // Hide reason box
+                                                noCheckbox.checked = false; // Uncheck the "No" checkbox
+                                            }
+                                        });
+
+                                        noCheckbox.addEventListener('change', function () {
+                                            if (noCheckbox.checked) {
+                                                reasonBox.style.display = 'block'; // Show reason box
+                                                yesCheckbox.checked = false; // Uncheck the "Yes" checkbox
+                                            }
+                                        });
+                                    }
+
+                                    // Initialize the toggle functionality
+                                    toggleReasonBox('rejoinYes', 'rejoinNo', 'rejoinReasonBox');
+                                    toggleReasonBox('recommendYes', 'recommendNo', 'recommendReasonBox');
+
+                                </script>
+                            </section>
+                            <section>
+                                <div class="reason">
+                                    <h4>10. My Overall job satisfaction <span>(RUSAN) </span>at the time of joining &
+                                        whether it
+                                        got
+                                        fulfilled *:-</h4>
+                                </div>
+                                <div class="row">
+                                    <div class="r2 padd-15">
+                                        <div class="form-group">
+                                            <div class="ocontainer">
+                                                <div class="a-area">
+                                                    <label for="companyCulture"> Company Culture</label>
+                                                </div>
+                                                <div class="b-area">
+                                                    <div class="star-rating">
+                                                        <input type="radio" id="cc-star5" name="companyCulture"
+                                                            value="5" required>
+                                                        <label for="cc-star5" title="5 stars">★</label>
+                                                        <input type="radio" id="cc-star4" name="companyCulture"
+                                                            value="4">
+                                                        <label for="cc-star4" title="4 stars">★</label>
+                                                        <input type="radio" id="cc-star3" name="companyCulture"
+                                                            value="3">
+                                                        <label for="cc-star3" title="3 stars">★</label>
+                                                        <input type="radio" id="cc-star2" name="companyCulture"
+                                                            value="2">
+                                                        <label for="cc-star2" title="2 stars">★</label>
+                                                        <input type="radio" id="cc-star1" name="companyCulture"
+                                                            value="1">
+                                                        <label for="cc-star1" title="1 star">★</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="ocontainer">
+                                                <div class="a-area"><label for="benefits"> Benefits</label></div>
+                                                <div class="b-area">
+                                                    <div class="star-rating">
+                                                        <input type="radio" id="b-star5" name="benefits" value="5"
+                                                            required>
+                                                        <label for="b-star5" title="5 stars">★</label>
+                                                        <input type="radio" id="b-star4" name="benefits" value="4">
+                                                        <label for="b-star4" title="4 stars">★</label>
+                                                        <input type="radio" id="b-star3" name="benefits" value="3">
+                                                        <label for="b-star3" title="3 stars">★</label>
+                                                        <input type="radio" id="b-star2" name="benefits" value="2">
+                                                        <label for="b-star2" title="2 stars">★</label>
+                                                        <input type="radio" id="b-star1" name="benefits" value="1">
+                                                        <label for="b-star1" title="1 star">★</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="ocontainer">
+                                                <div class="a-area"><label for="polices"> Polices</label></div>
+                                                <div class="b-area">
+                                                    <div class="star-rating">
+                                                        <input type="radio" id="p-star5" name="polices" value="5"
+                                                            required>
+                                                        <label for="p-star5" title="5 stars">★</label>
+                                                        <input type="radio" id="p-star4" name="polices" value="4">
+                                                        <label for="p-star4" title="4 stars">★</label>
+                                                        <input type="radio" id="p-star3" name="polices" value="3">
+                                                        <label for="p-star3" title="3 stars">★</label>
+                                                        <input type="radio" id="p-star2" name="polices" value="2">
+                                                        <label for="p-star2" title="2 stars">★</label>
+                                                        <input type="radio" id="p-star1" name="polices" value="1">
+                                                        <label for="p-star1" title="1 star">★</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="ocontainer">
+                                                <div class="a-area"><label for="employeed"> Employee Development</label>
+                                                </div>
+                                                <div class="b-area">
+                                                    <div class="star-rating">
+                                                        <input type="radio" id="e-star5" name="employeed" value="5"
+                                                            required>
+                                                        <label for="e-star5" title="5 stars">★</label>
+                                                        <input type="radio" id="e-star4" name="employeed" value="4">
+                                                        <label for="e-star4" title="4 stars">★</label>
+                                                        <input type="radio" id="e-star3" name="employeed" value="3">
+                                                        <label for="e-star3" title="3 stars">★</label>
+                                                        <input type="radio" id="e-star2" name="employeed" value="2">
+                                                        <label for="e-star2" title="2 stars">★</label>
+                                                        <input type="radio" id="e-star1" name="employeed" value="1">
+                                                        <label for="e-star1" title="1 star">★</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="ocontainer">
+                                                <div class="a-area"><label for="recoganition"> Recoganition</label>
+                                                </div>
+                                                <div class="b-area">
+                                                    <div class="star-rating">
+                                                        <input type="radio" id="r-star5" name="recoganition" value="5"
+                                                            required>
+                                                        <label for="r-star5" title="5 stars">★</label>
+                                                        <input type="radio" id="r-star4" name="recoganition" value="4">
+                                                        <label for="r-star4" title="4 stars">★</label>
+                                                        <input type="radio" id="r-star3" name="recoganition" value="3">
+                                                        <label for="r-star3" title="3 stars">★</label>
+                                                        <input type="radio" id="r-star2" name="recoganition" value="2">
+                                                        <label for="r-star2" title="2 stars">★</label>
+                                                        <input type="radio" id="r-star1" name="recoganition" value="1">
+                                                        <label for="r-star1" title="1 star">★</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+
+
+                                        </div>
+
+                                        <div class="form-group">
+
+
+                                        </div>
+
+                                    </div>
+                                    <div class="r2 padd-15">
+                                        <p>
+                                            <span>Disclaimer*</span> " The feedback provided through this form is
+                                            voluntary and will
+                                            be used to
+                                            improve our services and offerings. By submitting your feedback, you agree
+                                            that it may be shared internally with our team for evaluation and
+                                            consideration. While we value all feedback, please note that we may not be
+                                            able to address every comment or implement every suggestion. We also reserve
+                                            the right to remove or disregard feedback that is inappropriate, offensive,
+                                            or irrelevant. Your feedback is appreciated and plays a key role in helping
+                                            us enhance our user experience."
+                                        </p>
+                                        <label>
+                                            <input type="checkbox" id="disclaimerCheckbox" required>
+                                            <span>I have read and understood the disclaimer.</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </section>
+                            <!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+                            <!-- section3 -->
+                            <!-- <input type="submit" value="Submit" id="submitButton"> -->
+                            <button type="submit" id="submitBtn" disabled>Submit</button>
+                        </form>
+                        <!-- form -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Form page end -->
+    <!-- footer page start -->
+    <footer class="section-p1">
+        <div class="col">
+            <a href="https://www.rusanpharma.com/"><img class="logo" src="rusan/logo.png" alt=""></a>
+            <h4>Contect</h4>
+            <p><strong>Address:</strong> Charkop , Kandivali (W), Mumbai, MH, IN</p>
+            <p><strong>Phone:</strong> +01 4234 342 /(234124414)</p>
+            <p><strong>Hours:</strong> 09:00am - 06:00pm,mon - sat</p>
+        </div>
+        <div class="col">
+            <h4>RusanPharma</h4>
+            <a href="https://www.rusanpharma.com/about-us.html">About us</a>
+            <a href="https://www.rusanpharma.com/contact.html">Contact us</a>
+        </div>
+        <div class="col">
+            <div class="follow">
+                <h4>follow us</h4>
+                <div class="icon">
+                    <a href="https://www.facebook.com/RusanPharma/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com/RusanPharma/"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/lifeatrusan/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://in.linkedin.com/company/rusan-pharma"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Rusan Pharma &copy; 2024 All rights reserved</p>
+        </div>
+    </footer>
+    <!-- footer page end -->
+    <!-- ::::::::: javascript file ::::::::: -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const questionSelect = document.getElementById('question');
+            const reasonBox = document.getElementById('reasonBox');
+            const reasonInput = document.getElementById('reason');
+            const feedbackForm = document.getElementById('feedbackForm');
+
+            // Show or hide reason box based on selection
+            questionSelect.addEventListener('change', function () {
+                if (this.value === 'Other') {
+                    reasonBox.style.display = 'block'; // Show reason box
+                } else {
+                    reasonBox.style.display = 'none'; // Hide reason box
+                    reasonInput.value = ''; // Clear reason input
+                }
+            });
+
+            // Handle form submission
+            feedbackForm.addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                // Create a FormData object to hold the form data
+                const formData = new FormData(feedbackForm);
+
+                // Create an XMLHttpRequest object
+                const xhr = new XMLHttpRequest();
+                xhr.open('POST', feedbackForm.action, true); // Set the request method and URL
+
+                // Set up a callback function to handle the response
+                xhr.onload = function () {
+                    if (xhr.status === 200) {
+                        const response = JSON.parse(xhr.responseText);
+                        if (response.status === 'success') {
+                            // Show success message (you can customize this)
+                            alert(response.message);
+                            feedbackForm.reset(); // Reset the form
+                            reasonBox.style.display = 'none'; // Hide reason box
+                        } else {
+                            // Show error message
+                            alert(response.message);
+                        }
+                    } else {
+                        // Handle server errors
+                        alert('An error occurred while submitting the form. Please try again.');
+                    }
+                };
+
+                // Send the form data
+                xhr.send(formData);
+            });
+        });
+    </script>
+    <script>
+        document.getElementById('employeeForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Create a FormData object from the form
+            const formData = new FormData(this);
+
+            // Send the data to the server using Fetch API
+            fetch('rusandata.php', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.text()) // Get the response as text
+                .then(data => {
+                    // Handle the response from the server
+                    document.body.innerHTML = data; // Replace the body with the response
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
+    </script>
+    <script>
+        // Autofill functionality
+        document.getElementById('employeeId').addEventListener('blur', function () {
+            const employeeId = this.value;
+            if (employeeId.length === 6) { // Check if User ID is 8 digits
+                fetch(`fetch_employee.php?employeeId=${employeeId}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data && Object.keys(data).length > 0) {
+                            document.getElementById('employeeName').value = data.employeeName || '';
+                            document.getElementById('designation').value = data.designation || '';
+                            document.getElementById('department').value = data.department || '';
+                            document.getElementById('dateOfJoining').value = data.date_of_joining || '';
+                            document.getElementById('resignationDate').value = data.resignation_date || '';
+                            document.getElementById('lastDayOfWork').value = data.last_day_of_work || '';
+                            document.getElementById('exitInterviewDate').value = data.exit_interview_date || '';
+                            // Optionally, you can set the ratings and questions if needed
+                        } else {
+                            alert('No data found for this Employee ID.');
+                        }
+                    })
+                    .catch(error => console.error('Error fetching data:', error));
+            } else {
+                alert('Employee  ID must be 6 digits.');
+            }
+        });
+    </script>
+    <script>
+        const disclaimerCheckbox = document.getElementById('disclaimerCheckbox');
+        const submitButton = document.getElementById('submitBtn');
+
+        // Function to toggle the submit button based on the checkbox state
+        disclaimerCheckbox.addEventListener('change', function () {
+            submitBtn.disabled = !this.checked; // Enable if checked, disable if unchecked
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"
+        integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+    <script src="Rusanform.js"></script>
+</body>
+
+</html>

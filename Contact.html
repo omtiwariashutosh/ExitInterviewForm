@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rusan Exit Form</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="Rusanform.css">
+    <style>
+        .container {
+            max-width: 1100px;
+            width: 100%;
+            margin: auto;
+        }
+
+        .section-title {
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-top: 25px;
+            margin-left: -35px;
+        }
+
+        .section-title h2 {
+            font-size: 40px;
+            color: #000000;
+            font-weight: 700;
+            position: relative;
+            /* margin-top: 15px; */
+            /* margin-left: 30px; */
+            margin-bottom: 40px;
+        }
+
+        .section-title h2::before {
+            content: '';
+            height: 4px;
+            width: 50px;
+            background-color: #ff0000;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 14px;
+            margin-left: 2px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            height: 4px;
+            width: 25px;
+            background-color: #ff0000;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 22px;
+            margin-left: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header nav -->
+    <section id="header">
+        <a href="#"><img src="rusan/logo.png" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Form.html">Form</a></li>
+                <li><a href="Overall-Rating.html">Overall Rating</a></li>
+                <li><a class="active" href="Contact.html">Contact</a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+    <!-- header nav -->
+    <!-- Contact page stat -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="section-title padd-15">
+                    <h2>Contact Us</h2>
+                </div>
+            </div>
+            <section id="contect-details" class="section-p1">
+                <div class="details">
+                    <span>GET IN TOUCH</span>
+                    <!-- <h2>Visit one of our agency location or contact us today</h2> -->
+                    <h3>Head office</h3>
+                    <div>
+                        <li>
+                            <i class="far fa-envelope"></i>
+                            <p>Contact@example.com</p>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <p>Contact@Example.com</p>
+                        </li>
+                        <li>
+                            <i class="far fa-clock"></i>
+                            <p>Monday to Saturday: 9.00am to 6.00pm</p>
+                        </li>
+                    </div>
+                </div>
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.7389101626436!2d72.82049487418764!3d19.206602747861506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b6b759067a17%3A0x5ef726b943e60368!2sRusan%20Pharma%20Ltd.!5e0!3m2!1sen!2sin!4v1731743161618!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </section>
+            <section>
+                <div class="formd">
+                    <h2>Leave a message</h2><br>
+                </div>
+                <section id="form-details">
+                    <div class="row">
+                        <div class="r1 padd-15">
+                            <div class="fitem">
+                                <form id="contactForm" action="contact.php" method="post">
+                                    <div class="form-group">
+                                        <label for="yourname">Your Name</label>
+                                        <input type="text" id="yourname" name="yourname" placeholder="Your Name"
+                                            required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contact">Contact No</label>
+                                        <input type="text" id="contact" name="contact" placeholder="Your Contact No"
+                                            required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="yourmsg">Your Message</label>
+                                        <textarea id="yourmsg" name="yourmsg" placeholder="Your Message" rows="4"
+                                            required></textarea>
+                                    </div>
+                                    <button type="submit" id="sendBtn">Send</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="r1 padd-15">
+                            <div class="msg padd-15">
+                                <div class="box padd-15">
+                                    <img src="rusan/p3.webp" alt="Chairman 1">
+                                    <h2>Doremon</h2>
+                                    <p>Welcome to our organization! We are committed to excellence and innovation.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </section>
+    <!-- Contact page end -->
+    <!-- footer page start -->
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="rusan/logo.png" alt="">
+            <h4>Contect</h4>
+            <p><strong>Address:</strong> Charkop , Kandivali (E), Mumbai, MH, IN</p>
+            <p><strong>Phone:</strong> +01 4234 342 /(234124414)</p>
+            <p><strong>Hours:</strong> 09:00am - 06:00pm,mon - sat</p>
+        </div>
+        <div class="col">
+            <h4>RusanPharma</h4>
+            <a href="#">About us</a>
+            <a href="#">Privacy policy</a>
+            <a href="#">Terms &conditions</a>
+            <a href="#">Contact us</a>
+        </div>
+        <div class="col">
+            <div class="follow">
+                <h4>follow us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Rusan Pharma &copy; 2024 All rights reserved</p>
+        </div>
+    </footer>
+    <!-- footer page end -->
+
+    <!-- ::::::::: javascript file ::::::::: -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Create a FormData object from the form
+            const formData = new FormData(this);
+
+            // Send the data using Fetch API
+            fetch('contact.php', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.text())
+                .then(data => {
+                    // Display the response from the PHP script
+                    alert(data);
+                    // Optionally, clear the form
+                    this.reset(); // Reset the form
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('There was an error sending your message.');
+                });
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"
+        integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+    <script src="Rusanform.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rusan Exit Form</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="Rusanform.css">
+    <style>
+        .container {
+            max-width: 1100px;
+            width: 100%;
+            margin: 100px;
+        }
+
+        .section-title {
+            flex: 0 0 100%;
+            max-width: 100%;
+            /* margin-top: 50px; */
+        }
+
+        .section-title h2 {
+            font-size: 40px;
+            color: #000000;
+            font-weight: 700;
+            position: relative;
+            margin-top: -12vh;
+            margin-left: -45px;
+        }
+
+        .section-title h2::before {
+            content: '';
+            height: 4px;
+            width: 50px;
+            background-color: #ff0000;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 14px;
+            margin-left: 2px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            height: 4px;
+            width: 25px;
+            background-color: #ff0000;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 22px;
+            margin-left: 2px;
+        }
+
+        .r1 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+
+        #chartContainer {
+            max-width: 800px;
+            /* Set a maximum width for the chart */
+            margin: auto;
+            /* Center the chart */
+            height: 370px;
+            /* Set a fixed height */
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var chart = new CanvasJS.Chart("chartContainer", {
+                animationEnabled: true,
+                title: {
+                    text: "Overall Rate"
+                },
+                axisY: {
+                    title: "Response values",
+                    includeZero: true,
+                    interval: 10
+                },
+                toolTip: {
+                    shared: true
+                },
+                data: [{
+                    type: "bar",
+                    name: "Avg. Score",
+                    dataPoints: [
+                        { y: 54, label: "5 star" },
+                        { y: 4, label: "4 star" },
+                        { y: 10, label: "3 star" },
+                        { y: 38, label: "2 star" },
+                        { y: 46, label: "1 star" }
+                    ]
+                },
+                {
+                    type: "error",
+                    dataPoints: [
+                        { x: [0, 0], label: "5 star" },
+                        { x: [70, 78], label: "4 star" },
+                        { x: [78, 85], label: "3 star" },
+                        { x: [85, 92], label: "2 star" },
+                        { x: [72, 78], label: "1 star" }
+                    ]
+                }]
+            });
+
+            chart.render();
+
+            // Make the chart responsive
+            window.addEventListener('resize', function () {
+                chart.render();
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <!-- header nav -->
+    <section id="header">
+        <a href="#"><img src="rusan/logo.png" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Form.html">Form</a></li>
+                <li><a class="active" href="Overall-Rating.html">Overall Rating</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+    <!-- header nav -->
+    <!-- Overall Rating page stat -->
+    <section class="overall-rating" id="overall-rating">
+        <div class="container">
+            <div class="row">
+                <div class="section-title padd-15">
+                    <h2>Overall Rating</h2>
+                </div>
+            </div>
+            <div class="overall-content padd-15">
+                <div class="overall-container padd-15">
+                    <div class="row">
+                        <div class="r1 padd-15">
+                            <div class="containersr">
+                                <!-- <h1 class="padd-15">Overall Ratings</h1> -->
+                                <div class="Chart" id="chartContainer" style="height: 300px; width: 100%;"></div>
+                            </div>
+
+                        </div>
+                        <div class="r1 padd-15">
+                            <div class="people">
+                                <div class="pcontainer">
+                                    <img src="rusan/p1.png" alt="">
+                                    <p><span>RONY STEEV</span> Senior marketing manager <br>Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. Magnam, voluptas!</p>
+                                </div>
+                                <div class="pcontainer1">
+                                    <p><span>Tony</span> Senior IT Manager <br>Lorem, ipsum dolor sit amet
+                                        consectetur adipisicing elit. Magnam, quae.</p>
+                                    <img src="rusan/p2.png" alt="">
+                                </div>
+                                <div class="pcontainer">
+                                    <img src="rusan/p3.webp" alt="">
+                                    <p><span>STEEV</span> HR <br>Lorem ipsum dolor, sit amet
+                                        consectetur adipisicing elit. Ipsam, consequuntur?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Overall Rating page end -->
+    <!-- footer page start -->
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="rusan/logo.png" alt="">
+            <h4>Contect</h4>
+            <p><strong>Address:</strong> Charkop , Kandivali (W), Mumbai, MH, IN</p>
+            <p><strong>Phone:</strong> +01 4234 342 /(234124414)</p>
+            <p><strong>Hours:</strong> 09:00am - 06:00pm,mon - sat</p>
+        </div>
+        <div class="col">
+            <h4>RusanPharma</h4>
+            <a href="#">About us</a>
+            <a href="#">Privacy policy</a>
+            <a href="#">Terms &conditions</a>
+            <a href="#">Contact us</a>
+        </div>
+        <div class="col">
+            <div class="follow">
+                <h4>follow us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Rusan Pharma &copy; 2024 All rights reserved</p>
+        </div>
+    </footer>
+    <!-- footer page end -->
+
+    <!-- ::::::::: javascript file ::::::::: -->
+    <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"
+        integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+    <script src="Rusanform.js"></script>
+</body>
+
+</html>
